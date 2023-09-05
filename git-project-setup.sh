@@ -34,14 +34,14 @@ PROJECT_PATH=$5;
 
 if [ "$5" = "" ];
 then
-    PROJECT_PATH=$(pwd);
+    PROJECT_PATH=$(find ~/ -name "git-project-setup.sh" | grep -m 1 "git-project-setup.sh" | sed "s/git-project-setup.sh//");
     echo "\nWARN: Missing Argument 5: Project Local Setup Path. \nUsing $PROJECT_PATH for Project Local Setup \n"
 fi
 
 ORIGIN_URL=$(echo $4 | sed "s/github.com/$3@github.com/")
 PROJECT_NAME=$(echo $4 | rev | cut -d '/' -f 1 | rev | sed "s/.git//" )
 
-PROJECT_PATH=$PROJECT_PATH"/"$PROJECT_NAME;
+PROJECT_PATH=$PROJECT_PATH$PROJECT_NAME;
 
 printf "ProjectPath: $PROJECT_PATH \n\n";
 
