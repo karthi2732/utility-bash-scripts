@@ -2,7 +2,7 @@
 Set of frequently used bash scripts 
 
 - [git_project_setup.sh](#github-project-setup-script)
-- [mac_docker_setup.sh](mac_docker_setup.sh)
+- [mac_docker_setup.sh](#mac-docker-setup)
 
 ### Github Project Setup Script
 **Script:** [git_project_setup.sh](git_project_setup.sh)
